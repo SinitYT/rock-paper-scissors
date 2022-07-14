@@ -1,5 +1,6 @@
 const buttons = document.getElementsByTagName("button");
 let comTurn = document.getElementById("com-choice");
+let announce_p = document.getElementById("announce");
 
 
 
@@ -12,6 +13,7 @@ document.addEventListener("DOMContentLoaded",function(){
         button.addEventListener("click",function(){
           let userChoice = this.getAttribute("draw-type");
           computerChoice();
+          winnerCheck();
          
           
         })
@@ -37,6 +39,17 @@ function computerChoice() {
     /*let randomChosenPic = imgArray[random];*/
     comTurn.appendChild(imgArray[random]);
     return comTurn;
+
+}
+
+function winnerCheck(){
+    if (this.getAttribute('draw-type') === 'rock' && comTurn.innerHTML === imgArray[0]){
+        console.log("Draw");
+    } else if (this.getAttribute('draw-type') === 'rock' && comTurn.innerHTML === imgArray[1] ) {
+        console.log("I win");
+    } else  (this.getAttribute('draw-type') === 'rock' && comTurn.innerHTML === imgArray[2] );{
+        console.log("You win");
+    }
 
 }
 
