@@ -26,8 +26,6 @@ document.addEventListener("DOMContentLoaded",function(){
 
 function startGame(userChoice) {
     
-
-    
     userImage.src = `assets/images/${userChoice}.jpg`;
     userImage.alt = userChoice;
     randomNum = Math.floor(Math.random()*3);
@@ -55,9 +53,9 @@ function checkWinner(userChoice, choices){
         return (userChoice === 'rock') ? "You win!" : "You lose!";
     }
     
-
-
 }
+
+
 function countScore(){
     
     if (winner.textContent === "You win!"){
@@ -76,7 +74,6 @@ function countScore(){
     }
     
     
-
 }
     
     
