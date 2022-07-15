@@ -10,9 +10,6 @@ let randomNum;
 
 
 
-
-
-
 document.addEventListener("DOMContentLoaded",function(){
     
     for (let button of buttons){
@@ -20,6 +17,7 @@ document.addEventListener("DOMContentLoaded",function(){
           let userChoice = this.getAttribute("draw-type");
           startGame(userChoice);
           winner.textContent = checkWinner(userChoice,choices);
+          countScore();
          
           
         })
@@ -28,37 +26,14 @@ document.addEventListener("DOMContentLoaded",function(){
 
 function startGame(userChoice) {
     
-/*
-    let imgArray = new Array();
 
-    imgArray[0] = new Image();
-    imgArray[0].src = "assets/images/rock.jpg" ;
     
-    
-    imgArray[1] = new Image();
-    imgArray[1].src = "assets/images/paper.png";
-    
-    imgArray[2] = new Image();
-    imgArray[2].src = "assets/images/scissors.png";
-    */
     userImage.src = `assets/images/${userChoice}.jpg`;
     userImage.alt = userChoice;
     randomNum = Math.floor(Math.random()*3);
     computerImage.src = `assets/images/${choices[randomNum]}.jpg`;
     computerImage.alt = choices[randomNum];
     
-    /*
-    switch (randomNum){
-        case 0:
-            comTurn.appendChild(imgArray[0]);
-            break;
-        case 1:
-            comTurn.appendChild(imgArray[1]);
-            break;
-        case 2:
-            comTurn.appendChild(imgArray[2]);
-            break;
-*/
  }
     
   
@@ -83,6 +58,31 @@ function checkWinner(userChoice, choices){
 
 
 }
+function countScore(){
+    
+    if (winner.textContent === "You win!"){
+        let userOldScore = parseInt(document.getElementById("user-score").innerText);
+        userScore.innerText = ++userOldScore;
+    }
+    else if (winner.textContent === "You lose!") {
+
+        let computerOldScore = parseInt(document.getElementById("computer-score").innerText);
+        computerScore.innerText = ++computerOldScore;
+    }
+    else {
+        userScore.innerText = ++userOldScore;
+        computerScore.innerText = ++computerOldScore;
+
+    }
+    
+    
+
+}
+    
+    
+
+    
+
  
 
 
