@@ -1,6 +1,9 @@
 const buttons = document.getElementsByTagName("button");
-let comTurn = document.getElementById("com-choice");
-let announce_p = document.getElementById("announce");
+const userScore = document.getElementById("user-score");
+const computerScore = document.getElementById("computer-score");
+const userImage = document.getElementById("user-image");
+const computerImage = document.getElementById("computer-image");
+
 
 
 
@@ -12,7 +15,7 @@ document.addEventListener("DOMContentLoaded",function(){
     for (let button of buttons){
         button.addEventListener("click",function(){
           let userChoice = this.getAttribute("draw-type");
-          computerChoice();
+          computerChoice(userChoice);
           winnerCheck();
          
           
@@ -20,9 +23,10 @@ document.addEventListener("DOMContentLoaded",function(){
     }
 })
 
-function computerChoice() {
-    /*let choices = ['rock','paper','scissors'];*/
+function computerChoice(userChoice) {
+    let choices = ['rock','paper','scissors'];
    
+/*
     let imgArray = new Array();
 
     imgArray[0] = new Image();
@@ -34,7 +38,14 @@ function computerChoice() {
     
     imgArray[2] = new Image();
     imgArray[2].src = "assets/images/scissors.png";
+    */
+    userImage.src = `assets/images/${userChoice}.jpg`;
+    userImage.alt = userChoice;
     let randomNum = Math.floor(Math.random()*3);
+    computerImage.src = `assets/images/${choices[randomNum]}.jpg`;
+    computerImage.alt = choices[randomNum];
+    
+    /*
     switch (randomNum){
         case 0:
             comTurn.appendChild(imgArray[0]);
@@ -45,15 +56,15 @@ function computerChoice() {
         case 2:
             comTurn.appendChild(imgArray[2]);
             break;
-
-    }
+*/
+ }
     
     /*let randomChosenPic = imgArray[random];
     comTurn.appendChild(imgArray[random]);
     return comTurn;*/
 
-}
 
+/*
 
 function winnerCheck(){
     let userChoice = document.getElementsByClassName('draw-type');
