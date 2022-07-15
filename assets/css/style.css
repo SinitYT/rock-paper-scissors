@@ -1,0 +1,12 @@
+.user-board {
+    float:left;
+    width:40%;
+}
+.com-board {
+    float:right;
+    width:40%;
+}
+
+.user {
+    align-content: center;
+}

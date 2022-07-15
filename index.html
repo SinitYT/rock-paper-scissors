@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -6,37 +7,38 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Paper Rock Scissors Game</title>
 </head>
+
 <body>
     <header>
         <h1>Rock Paper Scissors</h1>
     </header>
-    <div id="user-board">
-        <h2>Make your move!</h2>
-        <button id="r" draw-type="rock">
-            <img src="assets/images/rock.jpg" alt="Rock">
-        </button>
-        <button id="p" draw-type="paper">
-            <img src="assets/images/paper.png" alt="Paper">
-        </button>
-        <button id="s" draw-type="scissors">
-            <img src="assets/images/scissors.png" alt="Scissors">
-        </button>
-    </div>
-    <div id="com-board">
-        <h2>I shoot!</h2>
-        <div id="com-choice">
+    <div class="gameHolder">
+        <div class="user">
+            <h2>Make your move!</h2>
+            <button  draw-type="rock">Rock</button>
+            <button draw-type="paper">Paper</button>
+            <button  draw-type="scissors">Scissors</button>
         </div>
+        <div class="user-board">
+            <h2>You shoot!</h2>
+            <h3 class="score">Your score: <span id="user-score">0</span></h3>
+            <img id= "user-image" src="assets/images/gamerule.jpg" alt="Rock Paper Scissors Game Rule Illustration">
+            
+        </div>
+        <div class="com-board">
+            <h2>I shoot!</h2>
+            <h3 class="score">My score: <span id="computer-score">0</span></h3>
+            <img id= "computer-image" src="assets/images/gamerule.jpg" alt="Rock Paper Scissors Game Rule Illustration">
+            
+        </div>
+
+    
     </div>
 
-    <div id="score">
-        <h3>Score:</h3>
-        <span id="user-result">0:</span> <span id="com-result">0</span>
-        <p id="announce">The winner is:</p>
-    </div>
-    
 
 
 
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
