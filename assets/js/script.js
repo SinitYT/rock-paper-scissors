@@ -59,7 +59,7 @@ function checkWinner(userChoice, choices){
 function countScore(){
     
     if (winner.textContent === "You win!"){
-        var userOldScore = parseInt(userScore.innerText);
+        let userOldScore = parseInt(document.getElementById("user-score").innerText);
         userScore.innerText = ++userOldScore;
     }
     else if (winner.textContent === "You lose!") {

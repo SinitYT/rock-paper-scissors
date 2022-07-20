@@ -16,6 +16,7 @@ header{
     float: left;
     width: 40%;
     padding-left: 15%;
+    box-sizing: border-box;
 }
 .user-board > h3 {
     margin: 20px 0 20px 75px;
@@ -48,6 +49,9 @@ header{
     border-radius: 50%;
     margin: 0 auto;
 }
-.result {
-    text-align: left ;
+.result  {
+    text-align: center ;
+    display: inline;
+    width: 10%;
+
 }
