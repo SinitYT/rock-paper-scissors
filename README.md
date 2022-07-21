@@ -1,10 +1,11 @@
 # Rock, Paper , Scissors
-This website is made for the purpose of simple rock, paper, scissors game. To those unfamiliar with what this game is about, it is a playful, easy game often used in light-hearted decision making. The game is played by two people  making a sign of either a rock, paper and scissors with their fingers,where rock tramps scissors,scissors tramp paper,and paper tramps rock. 
+This website is made for the purpose of simple rock, paper, scissors game. To those unfamiliar with what this game is about, it is a playful, easy game often used in light-hearted decision making. The game is played by two people  making a sign of either a rock, paper and scissors with their fingers,where rock beats scissors,scissors beat paper,and paper beat rock. 
 
 ## Features
 
 ### Header
 - The header shows the name of the game.
+- It provides the context of the website right away.
 
 ![Alt text](assets/images/Capture.PNG)
 
@@ -39,3 +40,22 @@ This website is made for the purpose of simple rock, paper, scissors game. To th
 - I confirmed that the game meets accessibility guidelines.
 
     ![Alt text](assets/images/lighthouse.PNG)
+- The website is responsive, functions and looks good on standard screen sizes.
+
+## Validator Testing
+- HTML 
+   - HTML code  passes through the official W3C validator with no issues.
+- CSS
+   -  CSS code  passes through the official (Jigsaw) validator with no issues.
+- JavaScript 
+    - JavaScript code passes through a linter (Jshint) with no significant issues.
+
+### Deployment
+- The site was deployed to Github pages. The procedure of deployment was as follows:
+   - Click on the settings tab of the project repository
+   - Scroll down to pages tab on the left side of the screen under the category "Code and automation" 
+   - Select the option main branch from the drop down menu of source
+   - The link to the project website shortly will be provided. 
+### Credits
+    - Media
+        - Images in the game were taken from google.
