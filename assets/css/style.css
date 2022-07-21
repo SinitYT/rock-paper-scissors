@@ -4,16 +4,18 @@
 *{
     margin: 0;
     padding: 0;
-    
     box-sizing: border-box;
 }
-
+html {
+    min-height: 100%;
+    position: relative;
+}
 body {
     background-color: white;
     font-family: 'Cormorant SC', serif;
 }
 header {
-    /*background: rgb(168, 135, 69);*/
+    
     background: #E1C3B5;
     padding: 20px;
 
@@ -47,22 +49,24 @@ header > h1 {
 
 .user-board {
     float: left;
-    width: 40%;
-    padding-left: 15%;
-    box-sizing: border-box;
+    padding-left: 25%;
+    width: 50%;
+    height: 400px;
 }
 .user-board > h3 {
-    margin: 20px 0 20px 75px;
+    margin: 20px 0 20px 55px;
 
 }
 
 .com-board {
     float: right;
-    width: 40%;
+    width: 50%;
+    padding-left: 10%;
+    
 
 }
 .com-board > h3 {
-    margin: 20px 0 20px 85px;
+    margin: 20px 0 20px 65px;
    
 
 }
@@ -73,8 +77,8 @@ header > h1 {
 }
 
 #computer-image,#user-image {
-    width: 200px;
-    height:200px;
+    width: 150px;
+    height:150px;
     padding: 30px;
     border-style: solid;
     border-color:#ccc;
@@ -88,9 +92,37 @@ header > h1 {
     width: 10%;
 
 }
+/*
+.gameHolder {
+    height: 70%;
+    position: relative;
+
+}
+*/
+footer {
+    
+    position:absolute;
+    bottom:0;
+    left: 0;
+    width:100%;
+    min-height: 80px;   
+    box-sizing: border-box;
+    background:#E1C3B5;
+    text-align: center;
+    
+ }
+ 
+ footer > ul {
+    color: white;
+    font-weight: bold;
+   
+ }
+   
+    
+
 /** media queries*/
 @media screen and (min-width: 320px) and (max-width: 480px){
-    
+   
     #computer-image,#user-image {
         width: 150px;
         height:150px;
@@ -101,6 +133,7 @@ header > h1 {
         border-radius: 50%;
         margin: 0 auto;
     }
+   
     .score {
         
         font-size: medium;
@@ -119,8 +152,12 @@ header > h1 {
         
         width: 70%;
         margin: 20px 15px 20px 40px;
+        /*padding-top: 11px;*/
         
     
+    }
+    .gameHolder{
+        height: 100vh;
     }
     
  
