@@ -1,11 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;500;700&display=swap');
 
 
-body {
-    background-color: whitesmoke;
+*{
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
 }
 
-header{
+body {
+    background-color: white;
+    font-family: 'Cormorant SC', serif;
+}
+header {
+    /*background: rgb(168, 135, 69);*/
+    background: #E1C3B5;
+    padding: 20px;
+
+}
+header > h1 {
+    color:white;
     text-align: center;
+    
+
+}
+
+.result > p {
+    text-align: center;
+    padding:20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+.user > h2 {
+    padding: 10px;
+}
+.user > button {
+    padding: 5px;
+
 }
 .user  {
     text-align: center;
@@ -54,4 +87,44 @@ header{
     display: inline;
     width: 10%;
 
+}
+/** media queries*/
+@media screen and (min-width: 320px) and (max-width: 480px){
+    
+    #computer-image,#user-image {
+        width: 150px;
+        height:150px;
+        padding: 30px;
+        border-style: solid;
+        border-color:#ccc;
+        border-width: 1px;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+    .score {
+        
+        font-size: medium;
+    }
+    
+    .user-board > h3 {
+        margin: 20px 0px 20px 30px;
+        width: 70%;
+       
+    
+    }
+    .user-board {
+        padding-left: 10px;
+    }
+    .com-board > h3 {
+        
+        width: 70%;
+        margin: 20px 15px 20px 40px;
+        
+    
+    }
+    
+ 
+    
+    
+    
 }
